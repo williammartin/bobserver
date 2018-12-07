@@ -1,0 +1,27 @@
+omg: 1
+info:
+  version: 0.0.1
+  title: Boy Oh Boy Server
+  description: An http service to fetch stock prices
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+lifecycle:
+  startup:
+    command: ["/bobserver"]
+actions:
+  fetch:
+    http:
+      port: 9000
+      method: get
+      path: /fetch
+    help: Fetches the latest trade price for a stock ticker
+    arguments:
+      ticker:
+        help: Stock ticker symbol
+        type: string
+        in: query
+        required: true
+    output:
+     type: float
+
