@@ -12,11 +12,11 @@ import (
 	"github.com/onsi/gomega/gexec"
 )
 
-var bobServerPath string
+var stockbrokerPath string
 
 var _ = BeforeSuite(func() {
 	var err error
-	bobServerPath, err = gexec.Build("github.com/williammartin/bobserver")
+	stockbrokerPath, err = gexec.Build("github.com/williammartin/stockbroker")
 	Expect(err).NotTo(HaveOccurred())
 })
 

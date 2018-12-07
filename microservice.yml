@@ -1,14 +1,14 @@
 omg: 1
 info:
   version: 0.0.1
-  title: Boy Oh Boy Server
+  title: Stockbroker
   description: An http service to fetch stock prices
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
 lifecycle:
   startup:
-    command: ["/bobserver"]
+    command: ["/stockbroker"]
 actions:
   fetch:
     http:

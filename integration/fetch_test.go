@@ -17,8 +17,8 @@ var _ = Describe("Fetch Endpoint", func() {
 	)
 
 	BeforeEach(func() {
-		bobServerCmd := exec.Command(bobServerPath)
-		session = execBin(bobServerCmd)
+		stockbrokerCmd := exec.Command(stockbrokerPath)
+		session = execBin(stockbrokerCmd)
 
 		Eventually(ping).Should(Succeed())
 	})
