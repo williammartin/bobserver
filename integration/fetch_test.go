@@ -37,7 +37,7 @@ var _ = Describe("Fetch Endpoint", func() {
 		It("responds with a stock price", func() {
 			_, body, err := fetchWithTicker("PVTL")
 			Expect(err).NotTo(HaveOccurred())
-			Expect(body).To(MatchRegexp(`\d+\.\d+`))
+			Expect(body).To(MatchRegexp(`\d+\.\d{2}$`))
 		})
 	})
 

@@ -37,5 +37,5 @@ func fetch(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.WriteHeader(200)
-	w.Write([]byte(fmt.Sprintf("%f", quote.RegularMarketPrice)))
+	w.Write([]byte(fmt.Sprintf("%.2f", quote.RegularMarketPrice)))
 }
